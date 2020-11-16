@@ -161,6 +161,7 @@ function valider() {
             setTimeout(() => {
                 document.body.style.background = "rgb(29, 29, 29)"
                 document.getElementById(`i${profil.reponsePos}`).style.background = "rgb(100, 100, 100)"
+                recharger()
             }, 4000);
         }                                                                                                                                                                   
         document.getElementById('answer').value = ""                                                       
