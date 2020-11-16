@@ -143,7 +143,7 @@ function afficherResultats() {                                                  
         let section = document.getElementById('resultat');
         section.appendChild(tr);
     }
-    document.getElementById('score').innerHTML = `Score : ${score}/10 <br> Projet par Théo B. pour Mr Devos - 2020`
+    document.getElementById('score').innerHTML = `Score : ${score}/10 <br> Copyright © 2020 Nathan Bastard`
     document.getElementById('score').className = "trt"
 }
 
