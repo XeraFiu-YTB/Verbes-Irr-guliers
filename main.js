@@ -145,7 +145,7 @@ function valider() {
             document.body.style.background = "rgb(29, 29, 29)"
         }, 1000);
     } else {       
-        if(reponse.toLowerCase() == profil.reponse) {
+        if(reponse.toLowerCase() == profil.reponse.toLowerCase()) {
             document.body.style.background = "green"
             document.getElementById(`i${profil.reponsePos}`).style.background = "lightseagreen"
             document.getElementById(`i${profil.reponsePos}`).innerHTML = `${profil.reponse}`
