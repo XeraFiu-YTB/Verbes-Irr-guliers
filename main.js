@@ -68,7 +68,7 @@ let listVerbes = [
 let listConjug = ['infinitif','preterit','participe','traduction']                                  
 let profil = {
     reponsePos: 0,
-    reponse: "answer",
+    question: [0, 1, 2],
     currentVerbs : ["infinitif","preterit","participe","traduction"],
 }
 
@@ -105,31 +105,36 @@ function recharger() {
     profil.currentVerbs[1] = listVerbes[randomVerbe].preterit
     profil.currentVerbs[2] = listVerbes[randomVerbe].participe
     profil.currentVerbs[3] = listVerbes[randomVerbe].traduction
-    
+
     switch(choosenConjug) {
         case "infinitif":    
-            profil.reponse = profil.currentVerbs[0]
-            profil.reponsePos = 0                                                                                                                 
-            profil.currentVerbs[0] = "???"                                                            
+            profil.reponsePos = 0
+            document.getElementById("i0").disabled = true
+            document.getElementById("i0").value = profil.currentVerbs[0]
+            profil.question = [1,2,3]                                                                                                                                                             
         break;
         case "preterit":
-            profil.reponse = profil.currentVerbs[1]  
-            profil.reponsePos = 1   
-            profil.currentVerbs[1] = "???"
+            profil.reponsePos = 1
+            document.getElementById("i1").disabled = true
+            document.getElementById("i1").value = profil.currentVerbs[1]
+            profil.question = [0,2,3]  
         break;
         case "participe":
-            profil.reponse = profil.currentVerbs[2] 
             profil.reponsePos = 2    
-            profil.currentVerbs[2] = "???"
+            document.getElementById("i2").disabled = true
+            document.getElementById("i2").value = profil.currentVerbs[2]
+            profil.question = [0,1,3]  
         break;
         case "traduction":
-            profil.reponse = profil.currentVerbs[3] 
             profil.reponsePos = 3    
-            profil.currentVerbs[3] = "???"
+            document.getElementById("i3").disabled = true
+            document.getElementById("i3").value = profil.currentVerbs[3]
+            profil.question = [0,1,2]  
         break;
     }
-    console.log(profil)
-    afficherVerbes()
+    for(let i=0;i<=2;i++) {
+        document.getElementById(`i${profil.question[i]}`).placeholder = "???"
+    }
 }
 
 function reload() {                                                                                        
@@ -137,41 +142,36 @@ function reload() {
     recharger()
 }
 
-function valider() {                                                                                       
-    let reponse = document.getElementById('answer').value                                                  
-    if(reponse == "") {                                                                                    
-        document.body.style.background = "red"
-        setTimeout(() => {
-            document.body.style.background = "rgb(29, 29, 29)"
-        }, 1000);
-    } else {       
-        if(reponse.toLowerCase() == profil.reponse.toLowerCase()) {
-            document.body.style.background = "green"
-            document.getElementById(`i${profil.reponsePos}`).style.background = "lightseagreen"
-            document.getElementById(`i${profil.reponsePos}`).innerHTML = `${profil.reponse}`
-            setTimeout(() => {
-                document.body.style.background = "rgb(29, 29, 29)"
-                document.getElementById(`i${profil.reponsePos}`).style.background = "rgb(100, 100, 100)"
-                recharger()
-            }, 2000);
+function valider() {           
+    let error = false                                                                            
+    for(let i=0;i<=2;i++) {
+        if(document.getElementById(`i${profil.question[i]}`).value.toLowerCase() == profil.currentVerbs[profil.question[i]].toLocaleLowerCase()) {
+            document.getElementById(`i${profil.question[i]}`).style.background = "lightseagreen"
         } else {
-            document.body.style.background = "red"
-            document.getElementById(`i${profil.reponsePos}`).style.background = "orange"
-            document.getElementById(`i${profil.reponsePos}`).innerHTML = `${profil.reponse}`
-            setTimeout(() => {
-                document.body.style.background = "rgb(29, 29, 29)"
-                document.getElementById(`i${profil.reponsePos}`).style.background = "rgb(100, 100, 100)"
-                recharger()
-            }, 4000);
-        }                                                                                                                                                                   
-        document.getElementById('answer').value = ""                                                       
+            error = true
+            document.getElementById(`i${profil.question[i]}`).style.background = "red"
+            document.getElementById(`i${profil.question[i]}`).value = profil.currentVerbs[profil.question[i]]
+        }
     }
-}
 
-function afficherVerbes() {                                                                                
-    for(let i=0;i<=3;i++) {
-        document.getElementById(`i${i}`).innerHTML = `${profil.currentVerbs[i]}`
+    if(error == true) {
+        document.body.style.background = "red"
+    } else {
+        document.body.style.background = "green"
     }
+
+    setTimeout(() => {
+        document.body.style.background = "rgb(29, 29, 29)"
+        document.getElementById(`i${profil.reponsePos}`).value = ""
+        document.getElementById(`i${profil.reponsePos}`).disabled = false
+        for(let i=0;i<=2;i++) {
+            document.getElementById(`i${profil.question[i]}`).value = ""
+            document.getElementById(`i${profil.question[i]}`).style.background = "rgb(100, 100, 100)"
+        }
+        recharger()
+    }, 5000)
+                                                         
+    
 }
 
 window.addEventListener('load', demarrer)                                                                  

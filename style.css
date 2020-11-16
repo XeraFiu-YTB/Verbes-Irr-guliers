@@ -46,7 +46,7 @@ column {
     font-size: 30px;
 }
 
-box {
+input {
     width: 30%;
     height: 60%;
     margin-left: 2%;
@@ -66,19 +66,6 @@ h1, a {
     font-size: 30px;
     font-family: 'Courier New', Courier, monospace;
     color: rgb(236, 236, 236);
-}
-
-input {
-    width: 30%;
-    height: 60%;
-    margin-left: 2%;
-    margin-right: 2%;
-    padding: 1%;
-    border-radius: 100px;
-    background-color: rgba(100, 77, 77, 0);
-    color: rgb(255, 255, 255);
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 30px;
 }
 
 button {
