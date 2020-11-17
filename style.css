@@ -1,11 +1,11 @@
 html, body {
-    margin: 0;                                              /*Pas de marges*/
-    padding: 0;                                             /*Pas de marges intérierures*/
-    width: 100%;                                            /*Largeur à 100%*/
-    height: 100%;                                           /*Hauteur à 100%*/
-    background-color: rgb(29, 29, 29);                    /*Couleur de fond*/
-    vertical-align: middle;                                 /*Alignement vertical au centre*/
-    overflow: hidden;                                       /*Cacher la barre de scroll*/
+    margin: 0;                                              
+    padding: 0;                                             
+    width: 100%;                                            
+    height: 100%;                                           
+    background-color: rgb(29, 29, 29);                    
+    vertical-align: middle;                                 
+    overflow: hidden;                                       
 }
 
 section {
@@ -14,20 +14,20 @@ section {
     justify-content: center;
     align-items: center;
     color: rgb(236, 236, 236);
-    display: flex;                                          /*Direction des composants en horizontale*/
+    display: flex;                                          
 }
 
 h1 {
-    font-size: 50px;                                        /*Taille de police à 50 pixels*/
-    font-family: 'Courier New', Courier, monospace;         /*Police*/
-    font-style: italic;                                     /*Police en italique*/
+    font-size: 50px;                                        
+    font-family: 'Courier New', Courier, monospace;         
+    font-style: italic;                                     
 }
 
 .title {
     width: 100%;
     height: 5%;
     margin-top: 50px;
-    justify-content: center;                                /*Centrer le contenu*/
+    justify-content: center;                                
     align-items: center;
     color: rgb(236, 236, 236);
 }
@@ -37,8 +37,8 @@ column {
     height: 60%;
     margin-left: 2%;
     margin-right: 2%;
-    border: 0px;                                            /*Epaisseur du bord (invisible)*/
-    border-radius: 100px;                                   /*Arrondir les bords*/
+    border: 0px;                                            
+    border-radius: 100px;                                   
     background-color: rgba(0, 0, 0, 0);
     align-items : center;
     justify-content: center;
@@ -83,23 +83,7 @@ button {
     font-size: 30px;
     font-family: 'Courier New', Courier, monospace;
 }
-/*
-a {
-    width: 30%;
-    height: 60%;
-    margin-left: 2%;
-    margin-right: 2%;
-    border: 0px;
-    border-radius: 100px;
-    background-color: rgb(43, 43, 43);
-    align-items : center;
-    justify-content: center;
-    text-align: center;
-    color: rgb(252, 252, 252);
-    font-size: 30px;
-    font-family: 'Courier New', Courier, monospace;
-}
-*/
+
 .trt {
     border-radius: 20px;
     text-align: center;
