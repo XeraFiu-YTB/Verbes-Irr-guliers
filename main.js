@@ -32,7 +32,7 @@ let listVerbes = [
     {"infinitif":"eat",			"preterit":"ate",			"participe":"eaten",		"traduction":"manger"},
     {"infinitif":"fall",		"preterit":"fell",			"participe":"fallen",		"traduction":"tomber"},
     {"infinitif":"feel",		"preterit":"felt",			"participe":"felt",			"traduction":"ressentir"},
-    {"infinitif":"fight",		"preterit":"fought",		"participe":"fougth",		"traduction":"se battre"},
+    {"infinitif":"fight",		"preterit":"fought",		"participe":"fougth",		"traduction":"battre"},
     {"infinitif":"find",		"preterit":"found",			"participe":"found",		"traduction":"trouver"},
     {"infinitif":"flew",		"preterit":"fled",			"participe":"fled",			"traduction":"fuir"},
     {"infinitif":"fly",			"preterit":"flew",			"participe":"flown",		"traduction":"voler"},
