@@ -34,7 +34,7 @@ let listVerbes = [
     {"infinitif":"feel",		"preterit":"felt",			"participe":"felt",			"traduction":"ressentir"},
     {"infinitif":"fight",		"preterit":"fought",		"participe":"fougth",		"traduction":"battre"},
     {"infinitif":"find",		"preterit":"found",			"participe":"found",		"traduction":"trouver"},
-    {"infinitif":"flew",		"preterit":"fled",			"participe":"fled",			"traduction":"fuir"},
+    {"infinitif":"flee",		"preterit":"fled",			"participe":"fled",			"traduction":"fuir"},
     {"infinitif":"fly",			"preterit":"flew",			"participe":"flown",		"traduction":"voler"},
     {"infinitif":"forbid",		"preterit":"forbade",		"participe":"forbidden",	"traduction":"interdire"},
     {"infinitif":"forget",		"preterit":"forgot",		"participe":"forgotten",	"traduction":"oublier"},
