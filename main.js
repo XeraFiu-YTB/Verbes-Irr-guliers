@@ -59,7 +59,7 @@ let listVerbes = [
     {"infinitif":"leave",		"preterit":"left",			"participe":"left",			"traduction":"partir"},
     {"infinitif":"lend",		"preterit":"lent",			"participe":"lent",			"traduction":"preter"},
     {"infinitif":"let",			"preterit":"let",			"participe":"let",			"traduction":"laisser"},
-    {"infinitif":"lie",			"preterit":"lay",			"participe":"lain",			"traduction":"mentir"},
+    {"infinitif":"lie",			"preterit":"lay",			"participe":"lain",			"traduction":"s'allonger"},
     {"infinitif":"light",		"preterit":"lit",			"participe":"lit",			"traduction":"eclairer"},
     {"infinitif":"lose",		"preterit":"lost",			"participe":"lost",			"traduction":"perdre"},
     {"infinitif":"make",		"preterit":"made",			"participe":"made",			"traduction":"fabriquer"},
